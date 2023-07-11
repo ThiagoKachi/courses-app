@@ -1,15 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
-import { Login } from './pages/Login';
 import GlobalStyles from './styles/global';
+import { RoutesComponent } from './routes/Routes';
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Routes>
-        <Route path="/" element={ <Login /> } />
-        {/* <Route path="/home" element={ <Register /> } /> */}
-      </Routes>
+      <RoutesComponent />
     </>
   );
 }
