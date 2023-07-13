@@ -8,7 +8,7 @@ import { CoursesList } from '../pages/CoursesList';
 export function RoutesComponent() {
   return (
     <Routes>
-      <Route path="/" element={<Login />}/>
+      <Route path="/login" element={<Login />}/>
       <Route path="/list" element={
         <PrivateRoute>
           <CoursesList />

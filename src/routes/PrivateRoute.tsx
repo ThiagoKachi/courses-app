@@ -8,7 +8,7 @@ function PrivateRoute({ children }: PrivateRouteProps) {
   const accessToken = localStorage.getItem('@Jusfy:token');
 
   if (!accessToken) {
-    return <Navigate to="/" />;
+    return <Navigate to="/login" />;
   }
 
   return children;

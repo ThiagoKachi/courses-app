@@ -1,6 +1,6 @@
 import { Course, Teacher } from '../../../models/Course';
 
-import closeBtn from '../../../assets/images/close-btn.svg';
+import closeBtn from '../../../assets/images/icons/close-btn.svg';
 import { transformDuration } from '../../../utils/transform/transformDuration';
 
 import * as S from './styles';
