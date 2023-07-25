@@ -1,13 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Input } from '../../components/Input';
+import { Logo } from '../../components/common/Logo';
 import { Popover } from '../../components/Popover';
 
 import { api } from '../../services/api';
 
-import logoImg from '../../assets/images/logo.png';
 import * as S from './styles';
-import { useNavigate } from 'react-router-dom';
 
 interface LoginDataProps {
   email: string;
@@ -38,7 +38,7 @@ export function Login() {
 
     try {
       const { data } = await api.post(`${baseURL}/auth/login`, loginData);
-      localStorage.setItem('@Jusfy:token', data.access_token);
+      localStorage.setItem('@App:token', data.access_token);
 
       navigate('/list');
     } catch (error) {
@@ -51,7 +51,8 @@ export function Login() {
   return (
     <S.Container>
       <S.Form onSubmit={handleSubmit}>
-        <S.Logo src={logoImg} alt="Jusfy logo" />
+        <Logo />
+
         <Input
           placeholder="Email"
           type="email"

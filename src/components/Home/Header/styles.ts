@@ -6,13 +6,6 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const Logo = styled.img`
-  width: 100px;
-  height: 47px;
-
-  margin-bottom: 49px;
-`;
-
 export const UserContainer = styled.div`
   display: flex;
 `;

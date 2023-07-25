@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import logoImg from '../../../assets/images/jusfy.png';
+
 import logoutImg from '../../../assets/images/icons/Logout.svg';
+
+import { Logo } from '../../common/Logo';
 
 import * as S from './styles';
 
@@ -9,13 +11,13 @@ export function Header() {
 
 
   function handleLogout() {
-    localStorage.removeItem('@Jusfy:token');
+    localStorage.removeItem('@App:token');
     navigate('/login');
   }
 
   return (
     <S.Container>
-      <S.Logo src={logoImg} alt="Jusfy logo" />
+      <Logo />
 
       <S.UserContainer>
         <S.User>Bem vindo, <strong>Gabriel!</strong></S.User>
